@@ -1,0 +1,32 @@
+.container-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center
+  }
+  .image {
+    flex-basis: 40%
+  }
+  .text {
+    font-size: 20px;
+    padding-left: 10px;
+  }
+label {
+  color: white;
+}
+.submit{
+    background-color: #008074;
+    border: 1px solid black;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-left: 40%;
+    margin-top: 2%;
+}
+form{
+    margin-top: 10%;
+}
+.footer-div{
+    height: 290px;
+    margin-top: 10%;
+    background-color: #008074;
+}

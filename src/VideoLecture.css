@@ -1,0 +1,25 @@
+* {
+  background-color: #212529;
+}
+.flex-container {
+  display: flex;
+}
+.talk-js-chatbox {
+  height: 600px;
+}
+.flex-child {
+  flex: 1;
+  margin-left: 7%;
+}
+iframe{
+  margin-top: 10%;
+}
+.heading{
+  display: block;
+  color: teal;
+  text-align: center;
+  padding: 10px;
+}
+.flex-child:first-child {
+  margin-right: 2%;
+}
