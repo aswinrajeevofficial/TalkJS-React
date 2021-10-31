@@ -6,7 +6,6 @@ import Talk from "talkjs";
 class VideoLecture extends Component {
   constructor(props) {
     super(props);
-    this.inbox = undefined;
     this.id = localStorage.getItem("id");
     this.userName = localStorage.getItem("name");
     this.emailId = localStorage.getItem("email");
@@ -38,16 +37,16 @@ class VideoLecture extends Component {
         });
         conversation.setParticipant(me);
         conversation.setParticipant(other);
-        this.popup = window.talkSession.createChatbox();
-        this.popup.select(conversation);
-        this.popup.mount(this.container);
+        this.chatbox = window.talkSession.createChatbox();
+        this.chatbox.select(conversation);
+        this.chatbox.mount(this.container);
       })
       .catch((e) => console.error(e));
   }
 
   componentWillUnmount() {
-    if (this.popup) {
-      this.popup.destroy();
+    if (this.chatbox) {
+      this.chatbox.destroy();
     }
   }
 
@@ -55,7 +54,7 @@ class VideoLecture extends Component {
     return (
       <div>
         <div>
-          <h1 className="heading">Welcome to Live Lecture</h1>
+          <h1 className="heading">Robotics 101: Live Lecture</h1>
         </div>
         <div className="flex-container">
           <div className="flex-child">
